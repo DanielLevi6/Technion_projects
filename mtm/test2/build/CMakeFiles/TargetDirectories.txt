@@ -1,0 +1,4 @@
+C:/Users/100ba/source/Technion_projects/mtm/test2/build/CMakeFiles/my_executable1.dir
+C:/Users/100ba/source/Technion_projects/mtm/test2/build/CMakeFiles/my_executable2.dir
+C:/Users/100ba/source/Technion_projects/mtm/test2/build/CMakeFiles/edit_cache.dir
+C:/Users/100ba/source/Technion_projects/mtm/test2/build/CMakeFiles/rebuild_cache.dir
