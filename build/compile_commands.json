@@ -1,0 +1,12 @@
+[
+{
+  "directory": "C:/Users/100ba/source/Technion_projects/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-gcc.exe   -std=c99 --pedantic-errors -Wall -Werror -g -o CMakeFiles\\my_executable1.dir\\helloworld.c.obj -c C:\\Users\\100ba\\source\\Technion_projects\\mtm\\test2\\helloworld.c",
+  "file": "C:/Users/100ba/source/Technion_projects/mtm/test2/helloworld.c"
+},
+{
+  "directory": "C:/Users/100ba/source/Technion_projects/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-gcc.exe   -std=c99 --pedantic-errors -Wall -Werror -g -o CMakeFiles\\my_executable2.dir\\hiworld.c.obj -c C:\\Users\\100ba\\source\\Technion_projects\\mtm\\test2\\hiworld.c",
+  "file": "C:/Users/100ba/source/Technion_projects/mtm/test2/hiworld.c"
+}
+]
