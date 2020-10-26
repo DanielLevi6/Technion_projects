@@ -2,18 +2,20 @@
 #include <stdlib.h>
 #include <math.h>
 
-int main(){
+int my_log2(int num);
+
+int main() {
 
     int size_of_input = 0, exponent_sum = 0, exponent, i;
     
     printf("Enter size of input:\n");
 
-    if (!scanf("%d", &size_of_input) || size_of_input == 0) {
+    if (!scanf("%d", &size_of_input) || size_of_input <= 0) {
         printf("Invalid size\n");
         return -1;
     }
 
-    int input_array[] = malloc(sizeof(int)*size_of_input);
+    int *input_array = malloc(sizeof(int)*size_of_input);
 
     printf("Enter numbers:\n");
 
@@ -26,15 +28,27 @@ int main(){
     
     for (i = 0; i < size_of_input; i++) {
 
-        exponent = log(input_array[i]);
+        exponent = my_log2(input_array[i]);
         exponent_sum += exponent;
 
         printf("The number %d is a power of 2: %d = 2^%d\n", input_array[i], input_array[i], exponent);
     }
 
-    printf("Total exponent sum is %d", exponent_sum);
+    printf("Total exponent sum is %d\n", exponent_sum);
 
     free(input_array);
 
     return 0;
+}
+
+int my_log2(int num) {
+
+    int exponent = 0;
+
+    while (num > 1) {
+        num /= 2;
+        ++exponent; 
+    }
+
+    return exponent;
 }

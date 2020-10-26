@@ -1,0 +1,1 @@
+/usr/bin/gcc -std=c99 --pedantic-errors -Wall -Werror -g  -rdynamic CMakeFiles/my_executable.dir/part1.c.o  -o my_executable 

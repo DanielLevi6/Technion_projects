@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/batelov/Technion_projects/mtm/ex0/part1/build",
+  "command": "/usr/bin/gcc   -std=c99 --pedantic-errors -Wall -Werror -g   -o CMakeFiles/my_executable.dir/part1.c.o   -c /home/batelov/Technion_projects/mtm/ex0/part1/part1.c",
+  "file": "/home/batelov/Technion_projects/mtm/ex0/part1/part1.c"
+}
+]

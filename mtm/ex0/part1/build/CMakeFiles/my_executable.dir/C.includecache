@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/batelov/Technion_projects/mtm/ex0/part1/part1.c
+stdio.h
+-
+stdlib.h
+-
+math.h
+-
+
