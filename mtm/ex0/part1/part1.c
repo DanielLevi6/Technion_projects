@@ -22,7 +22,7 @@ int main()
 
     int *input_array = malloc(sizeof(int)*size_of_input);
 
-    if (scanInputNumbers(size_of_input, input_array) == NOT_VALID)
+    if (input_array == NULL || scanInputNumbers(size_of_input, input_array) == NOT_VALID)
     {
         return NOT_VALID;
     }
@@ -53,6 +53,9 @@ int scanSizeOfInput(int size)
     return size;
 }
 
+/*Scans the input numbers to an array if they are valid, and returns 1. 
+If at least one input is not valid or it is the end of the file (EOF = -1),
+then frees the array and returns 0*/
 int scanInputNumbers(int size_of_input, int *input_array)
 {
     printf("Enter numbers:\n");
