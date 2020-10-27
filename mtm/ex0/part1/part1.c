@@ -2,72 +2,58 @@
 #include <stdlib.h>
 
 #define NOT_VALID 0
+#define ERROR -1
 #define VALID 1
 
 int scanSizeOfInput(int size);
 int scanInputNumbers(int size_of_input, int *input_array);
-int calculateAndPrintExponent(int num);
+int printExponent(int num);
 int logBase2ForPowerOf2Number(int num);
 
-int main()
-{
+int main() {
     int size_of_input = 0, exponent_sum = 0;
-    
     size_of_input = scanSizeOfInput(size_of_input);
 
-    if (size_of_input == NOT_VALID)
-    {
+    if (size_of_input == NOT_VALID) {
         return NOT_VALID;
     }
 
     int *input_array = malloc(sizeof(int)*size_of_input);
 
-    if (input_array == NULL || scanInputNumbers(size_of_input, input_array) == NOT_VALID)
-    {
+    if (input_array == NULL || scanInputNumbers(size_of_input, input_array) == NOT_VALID) {
         return NOT_VALID;
     }
 
-    for (int i = 0; i < size_of_input; i++) 
-    {
-        exponent_sum += calculateAndPrintExponent(input_array[i]);
+    for (int i = 0; i < size_of_input; i++) {
+        exponent_sum += printExponent(input_array[i]);
     }
 
     printf("Total exponent sum is %d\n", exponent_sum);
-
     free(input_array);
 
     return 0;
 }
 
-int scanSizeOfInput(int size)
-{
+//Scans the size of input numbers
+int scanSizeOfInput(int size) {
     printf("Enter size of input:\n");
 
-    if (scanf("%d", &size) <= 0 || size <= 0) 
-    {
+    if (scanf("%d", &size) <= 0 || size <= 0) {
         printf("Invalid size\n");
-
         return NOT_VALID;
     }
 
     return size;
 }
 
-/*Scans the input numbers to an array if they are valid, and returns 1. 
-If at least one input is not valid or it is the end of the file (EOF = -1),
-then frees the array and returns 0*/
-int scanInputNumbers(int size_of_input, int *input_array)
-{
+//Scans the input numbers to an array if they are valid
+int scanInputNumbers(int size_of_input, int *input_array) {
     printf("Enter numbers:\n");
 
-    for (int i = 0; i < size_of_input; i++) 
-    {
-        if (scanf("%d", &input_array[i]) <= 0) 
-        {
+    for (int i = 0; i < size_of_input; i++) {
+        if (scanf("%d", &input_array[i]) <= 0) {
             printf("Invalid number\n");
-
             free(input_array);
-
             return NOT_VALID;
         }
     }
@@ -75,17 +61,15 @@ int scanInputNumbers(int size_of_input, int *input_array)
     return VALID;
 }
 
-int calculateAndPrintExponent(int num)
-{
-    if (num <= 0) 
-    {
+//Prints and returns the exponent of a power of 2 number   
+int printExponent(int num) {
+    if (num <= 0) {
         return NOT_VALID;
     }
 
     int exponent = logBase2ForPowerOf2Number(num);
 
-    if (exponent < 0)
-    {
+    if (exponent < 0) {
         return NOT_VALID;
     }
     
@@ -94,15 +78,14 @@ int calculateAndPrintExponent(int num)
     return exponent;
 }
 
-int logBase2ForPowerOf2Number(int num) 
-{
+//Calculates log base 2 of a power of 2 number 
+int logBase2ForPowerOf2Number(int num) {
     int exponent = 0;
 
     while (num > 1) {
 
-        if (num % 2 != 0)
-        {
-            return -1;
+        if (num % 2 != 0) {
+            return ERROR;
         }
         
         num /= 2;
