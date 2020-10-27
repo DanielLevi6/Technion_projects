@@ -1,47 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int my_log2(int num);
+#define NOT_VALID 0
+#define VALID 1
 
-int main() {
+int scanSizeOfInput(int size);
+int scanInputNumbers(int size_of_input, int *input_array);
+int calculateAndPrintExponent(int num);
+int logBase2ForPowerOf2Number(int num);
 
-    int size_of_input = 0, exponent, exponent_sum = 0, i;
+int main()
+{
+    int size_of_input = 0, exponent_sum = 0;
     
-    printf("Enter size of input:\n");
+    size_of_input = scanSizeOfInput(size_of_input);
 
-    if (!scanf("%d", &size_of_input) || size_of_input <= 0) {
-        printf("Invalid size\n");
-        return 0;
+    if (size_of_input == NOT_VALID)
+    {
+        return NOT_VALID;
     }
 
     int *input_array = malloc(sizeof(int)*size_of_input);
 
-    printf("Enter numbers:\n");
-
-    for (i = 0; i < size_of_input; i++) {
-
-        if (scanf("%d", &input_array[i]) <= 0) {
-
-            printf("Invalid number\n");
-            free(input_array);
-
-            return 0;
-        }
+    if (scanInputNumbers(size_of_input, input_array) == NOT_VALID)
+    {
+        return NOT_VALID;
     }
-    
-    for (i = 0; i < size_of_input; i++) {
 
-        if (input_array[i] <= 0) 
-            continue;
-
-        exponent = my_log2(input_array[i]);
-
-        if (exponent < 0)
-            continue;
-
-        exponent_sum += exponent;
-
-        printf("The number %d is a power of 2: %d = 2^%d\n", input_array[i], input_array[i], exponent);
+    for (int i = 0; i < size_of_input; i++) 
+    {
+        exponent_sum += calculateAndPrintExponent(input_array[i]);
     }
 
     printf("Total exponent sum is %d\n", exponent_sum);
@@ -51,14 +39,68 @@ int main() {
     return 0;
 }
 
-int my_log2(int num) {
+int scanSizeOfInput(int size)
+{
+    printf("Enter size of input:\n");
 
+    if (scanf("%d", &size) <= 0 || size <= 0) 
+    {
+        printf("Invalid size\n");
+
+        return NOT_VALID;
+    }
+
+    return size;
+}
+
+int scanInputNumbers(int size_of_input, int *input_array)
+{
+    printf("Enter numbers:\n");
+
+    for (int i = 0; i < size_of_input; i++) 
+    {
+        if (scanf("%d", &input_array[i]) <= 0) 
+        {
+            printf("Invalid number\n");
+
+            free(input_array);
+
+            return NOT_VALID;
+        }
+    }
+
+    return VALID;
+}
+
+int calculateAndPrintExponent(int num)
+{
+    if (num <= 0) 
+    {
+        return NOT_VALID;
+    }
+
+    int exponent = logBase2ForPowerOf2Number(num);
+
+    if (exponent < 0)
+    {
+        return NOT_VALID;
+    }
+    
+    printf("The number %d is a power of 2: %d = 2^%d\n", num, num, exponent);
+
+    return exponent;
+}
+
+int logBase2ForPowerOf2Number(int num) 
+{
     int exponent = 0;
 
     while (num > 1) {
 
         if (num % 2 != 0)
+        {
             return -1;
+        }
         
         num /= 2;
         ++exponent; 
