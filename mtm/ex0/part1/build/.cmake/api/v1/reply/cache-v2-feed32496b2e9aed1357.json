@@ -735,7 +735,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "mtm_tot"
+			"value" : "part1"
 		},
 		{
 			"name" : "CMAKE_PROJECT_VERSION",
@@ -1091,6 +1091,30 @@
 		},
 		{
 			"name" : "mtm_tot_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/batelov/Technion_projects/mtm/ex0/part1"
+		},
+		{
+			"name" : "part1_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/batelov/Technion_projects/mtm/ex0/part1/build"
+		},
+		{
+			"name" : "part1_SOURCE_DIR",
 			"properties" : 
 			[
 				{

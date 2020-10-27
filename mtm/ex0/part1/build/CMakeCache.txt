@@ -121,7 +121,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=mtm_tot
+CMAKE_PROJECT_NAME:STATIC=part1
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=0.1.0
@@ -205,6 +205,12 @@ mtm_tot_BINARY_DIR:STATIC=/home/batelov/Technion_projects/mtm/ex0/part1/build
 
 //Value Computed by CMake
 mtm_tot_SOURCE_DIR:STATIC=/home/batelov/Technion_projects/mtm/ex0/part1
+
+//Value Computed by CMake
+part1_BINARY_DIR:STATIC=/home/batelov/Technion_projects/mtm/ex0/part1/build
+
+//Value Computed by CMake
+part1_SOURCE_DIR:STATIC=/home/batelov/Technion_projects/mtm/ex0/part1
 
 
 ########################

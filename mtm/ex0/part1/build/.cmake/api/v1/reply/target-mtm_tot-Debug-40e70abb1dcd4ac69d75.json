@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "my_executable"
+			"path" : "mtm_tot"
 		}
 	],
 	"backtrace" : 1,
@@ -45,7 +45,7 @@
 			]
 		}
 	],
-	"id" : "my_executable::@6890427a1f51a3e7e1df",
+	"id" : "mtm_tot::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -61,8 +61,8 @@
 		],
 		"language" : "C"
 	},
-	"name" : "my_executable",
-	"nameOnDisk" : "my_executable",
+	"name" : "mtm_tot",
+	"nameOnDisk" : "mtm_tot",
 	"paths" : 
 	{
 		"build" : ".",

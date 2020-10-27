@@ -1,0 +1,1 @@
+/usr/bin/gcc -std=c99 --pedantic-errors -Wall -Werror -g  -rdynamic CMakeFiles/mtm_tot.dir/part1.c.o  -o mtm_tot 

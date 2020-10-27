@@ -70,7 +70,7 @@ CMAKE_BINARY_DIR = /home/batelov/Technion_projects/mtm/ex0/part1/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/my_executable.dir/all
+all: CMakeFiles/mtm_tot.dir/all
 
 .PHONY : all
 
@@ -80,36 +80,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/my_executable.dir/clean
+clean: CMakeFiles/mtm_tot.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/my_executable.dir
+# Target rules for target CMakeFiles/mtm_tot.dir
 
 # All Build rule for target.
-CMakeFiles/my_executable.dir/all:
-	$(MAKE) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/depend
-	$(MAKE) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/batelov/Technion_projects/mtm/ex0/part1/build/CMakeFiles --progress-num=1,2 "Built target my_executable"
-.PHONY : CMakeFiles/my_executable.dir/all
+CMakeFiles/mtm_tot.dir/all:
+	$(MAKE) -f CMakeFiles/mtm_tot.dir/build.make CMakeFiles/mtm_tot.dir/depend
+	$(MAKE) -f CMakeFiles/mtm_tot.dir/build.make CMakeFiles/mtm_tot.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/batelov/Technion_projects/mtm/ex0/part1/build/CMakeFiles --progress-num=1,2 "Built target mtm_tot"
+.PHONY : CMakeFiles/mtm_tot.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/my_executable.dir/rule: cmake_check_build_system
+CMakeFiles/mtm_tot.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/batelov/Technion_projects/mtm/ex0/part1/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/my_executable.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/mtm_tot.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/batelov/Technion_projects/mtm/ex0/part1/build/CMakeFiles 0
-.PHONY : CMakeFiles/my_executable.dir/rule
+.PHONY : CMakeFiles/mtm_tot.dir/rule
 
 # Convenience name for target.
-my_executable: CMakeFiles/my_executable.dir/rule
+mtm_tot: CMakeFiles/mtm_tot.dir/rule
 
-.PHONY : my_executable
+.PHONY : mtm_tot
 
 # clean rule for target.
-CMakeFiles/my_executable.dir/clean:
-	$(MAKE) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/clean
-.PHONY : CMakeFiles/my_executable.dir/clean
+CMakeFiles/mtm_tot.dir/clean:
+	$(MAKE) -f CMakeFiles/mtm_tot.dir/build.make CMakeFiles/mtm_tot.dir/clean
+.PHONY : CMakeFiles/mtm_tot.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

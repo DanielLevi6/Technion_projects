@@ -128,17 +128,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named my_executable
+# Target rules for targets named mtm_tot
 
 # Build rule for target.
-my_executable: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 my_executable
-.PHONY : my_executable
+mtm_tot: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mtm_tot
+.PHONY : mtm_tot
 
 # fast build rule for target.
-my_executable/fast:
-	$(MAKE) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/build
-.PHONY : my_executable/fast
+mtm_tot/fast:
+	$(MAKE) -f CMakeFiles/mtm_tot.dir/build.make CMakeFiles/mtm_tot.dir/build
+.PHONY : mtm_tot/fast
 
 part1.o: part1.c.o
 
@@ -146,7 +146,7 @@ part1.o: part1.c.o
 
 # target to build an object file
 part1.c.o:
-	$(MAKE) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/part1.c.o
+	$(MAKE) -f CMakeFiles/mtm_tot.dir/build.make CMakeFiles/mtm_tot.dir/part1.c.o
 .PHONY : part1.c.o
 
 part1.i: part1.c.i
@@ -155,7 +155,7 @@ part1.i: part1.c.i
 
 # target to preprocess a source file
 part1.c.i:
-	$(MAKE) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/part1.c.i
+	$(MAKE) -f CMakeFiles/mtm_tot.dir/build.make CMakeFiles/mtm_tot.dir/part1.c.i
 .PHONY : part1.c.i
 
 part1.s: part1.c.s
@@ -164,7 +164,7 @@ part1.s: part1.c.s
 
 # target to generate assembly for a file
 part1.c.s:
-	$(MAKE) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/part1.c.s
+	$(MAKE) -f CMakeFiles/mtm_tot.dir/build.make CMakeFiles/mtm_tot.dir/part1.c.s
 .PHONY : part1.c.s
 
 # Help Target
@@ -175,7 +175,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... my_executable"
+	@echo "... mtm_tot"
 	@echo "... part1.o"
 	@echo "... part1.i"
 	@echo "... part1.s"
