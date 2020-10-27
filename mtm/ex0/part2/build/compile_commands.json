@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/batelov/Technion_projects/mtm/ex0/part2/build",
+  "command": "/usr/bin/gcc   -std=c99 --pedantic-errors -Wall -Werror -DNDEBUG -g   -o CMakeFiles/mtm_buggy.dir/mtm_buggy.c.o   -c /home/batelov/Technion_projects/mtm/ex0/part2/mtm_buggy.c",
+  "file": "/home/batelov/Technion_projects/mtm/ex0/part2/mtm_buggy.c"
+}
+]

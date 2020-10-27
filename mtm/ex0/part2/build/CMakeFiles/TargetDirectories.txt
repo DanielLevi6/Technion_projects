@@ -1,0 +1,3 @@
+/home/batelov/Technion_projects/mtm/ex0/part2/build/CMakeFiles/rebuild_cache.dir
+/home/batelov/Technion_projects/mtm/ex0/part2/build/CMakeFiles/edit_cache.dir
+/home/batelov/Technion_projects/mtm/ex0/part2/build/CMakeFiles/mtm_buggy.dir

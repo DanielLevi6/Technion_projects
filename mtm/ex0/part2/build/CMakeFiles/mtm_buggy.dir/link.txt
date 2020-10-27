@@ -1,0 +1,1 @@
+/usr/bin/gcc -std=c99 --pedantic-errors -Wall -Werror -DNDEBUG -g  -rdynamic CMakeFiles/mtm_buggy.dir/mtm_buggy.c.o  -o mtm_buggy 
