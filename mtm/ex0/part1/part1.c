@@ -21,6 +21,7 @@ int main() {
     int *input_array = malloc(sizeof(int)*size_of_input);
 
     if (input_array == NULL || scanInputNumbers(size_of_input, input_array) == NOT_VALID) {
+        free(input_array);
         return NOT_VALID;
     }
 
@@ -53,7 +54,6 @@ int scanInputNumbers(int size_of_input, int *input_array) {
     for (int i = 0; i < size_of_input; i++) {
         if (scanf("%d", &input_array[i]) <= 0) {
             printf("Invalid number\n");
-            free(input_array);
             return NOT_VALID;
         }
     }

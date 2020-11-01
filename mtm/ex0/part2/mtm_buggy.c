@@ -53,9 +53,9 @@ void sortStrings(char** strings, int size) {
 	while (changed) {
 		changed = false;
 		for (int i = 0; i < size - 1; i++) {
-			if (strcmp(strings[i], strings[i + 1]) >= 0) {
+			if (strcmp(strings[i], strings[i + 1]) > 0) {
 				swap(&strings[i], &strings[i + 1]);
-				changed = false;
+				changed = true;
 			}
 		}
 	}
